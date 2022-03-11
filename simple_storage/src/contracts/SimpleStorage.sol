@@ -1,21 +1,18 @@
-//Solidity Version
-pragma solidity 0.6.4;
+// SPDX-License-Identifier: MIT
 
-// Store a single data point and allow fetching/updating of that datapoint
+pragma solidity >=0.4.0 <0.9.0;
+
 contract SimpleStorage {
-    
-    // data point
-    string public storedData;
-    
-    event myEventTest(string eventOutput);
-    
-    function set(string memory myText) public {
-        storedData = myText;
-        emit myEventTest(myText);
+    uint[10] public mapData;
+
+
+    function settle(uint _tileId, uint _settlementId) public {
+        mapData[_tileId] = _settlementId;
     }
-    
-    function get() public view returns (string memory) {
-        return storedData;
+
+    function getTileInformation(uint _tileId) public view returns (uint) {
+        return mapData[_tileId];
     }
-    
+
+
 }
