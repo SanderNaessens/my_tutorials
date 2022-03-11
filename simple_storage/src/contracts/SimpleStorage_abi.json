@@ -1,25 +1,18 @@
 [
 	{
-		"anonymous": false,
 		"inputs": [
 			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "eventOutput",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_tileId",
+				"type": "uint256"
 			}
 		],
-		"name": "myEventTest",
-		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "get",
+		"name": "getTileInformation",
 		"outputs": [
 			{
-				"internalType": "string",
+				"internalType": "uint256",
 				"name": "",
-				"type": "string"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -28,27 +21,38 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "myText",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
-		"name": "set",
+		"name": "mapData",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_tileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_settlementId",
+				"type": "uint256"
+			}
+		],
+		"name": "settle",
 		"outputs": [],
 		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "storedData",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
 		"type": "function"
 	}
 ]
